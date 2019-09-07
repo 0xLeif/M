@@ -16,13 +16,16 @@ struct ContentView: View {
         
         NavigationView {
             List(songs, id: \.self) { song in
-                L1MusicView(song: song)
+                MusicLabelView(song: song)
             }
             .navigationBarTitle("Songs")
         }
         .onAppear {
             DispatchQueue.main.async {
-                self.songs = MPMediaQuery.songs().items?.compactMap(Song.init) ?? []
+                self.songs = MPMediaQuery
+                    .songs()
+                    .items?
+                    .compactMap(Song.init) ?? []
             }
         }
     }
