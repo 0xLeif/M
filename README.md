@@ -5,7 +5,7 @@
 A Minimalistic Apple Music App
 
 ## Song List
-![Song List](assets/song_list.png)
+![Song List](https://github.com/zmeriksen/M/blob/master/assets/song_list.PNG)
 
 ## Song Detail
-![Songs Detail](assets/song_detail.png)
+![Songs Detail](https://github.com/zmeriksen/M/blob/master/assets/song_detail.PNG)
