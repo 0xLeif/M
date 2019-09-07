@@ -9,8 +9,8 @@
 import SwiftUI
 import MediaPlayer
 
-struct ContentView: View {
-    @State private var songs: [Song] = []
+struct SongListView: View {
+    var songs: [Song] = []
     
     var body: some View {
         
@@ -20,20 +20,12 @@ struct ContentView: View {
             }
             .navigationBarTitle("Songs")
         }
-        .onAppear {
-            DispatchQueue.main.async {
-                self.songs = MPMediaQuery
-                    .songs()
-                    .items?
-                    .compactMap(Song.init) ?? []
-            }
-        }
     }
     
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SongListView()
     }
 }
