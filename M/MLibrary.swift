@@ -17,7 +17,11 @@ class MLibrary {
     var loadingModel: LoadingModel
     
     var artists: [Artist] = []
-    var songs: [Song] = []
+    var songs: [Song] = [] {
+        didSet {
+            
+        }
+    }
     
     init(model: LoadingModel) {
         loadingModel = model

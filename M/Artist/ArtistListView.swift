@@ -11,6 +11,7 @@ import MediaPlayer
 
 struct Artist: Hashable {
     var item: MPMediaItem
+    var songs: [Song] = []
     
     var name: String? {
         item.artist

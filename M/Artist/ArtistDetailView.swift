@@ -7,12 +7,23 @@
 //
 
 import SwiftUI
+import SF
+import MediaPlayer
+import Combine
 
 struct ArtistDetailView: View {
     var artist: Artist
+    @State private var songs: [Song] = []
     
     var body: some View {
-        Text("Detail for: \(artist.name ?? "...") \(artist.item.title ?? "")")
+        VStack {
+            HStack {
+                SF.person.image
+                Text("\(artist.name ?? "...")")
+            }
+            .font(.largeTitle)
+            SongListView(songs: songs)
+        }
     }
 }
 
