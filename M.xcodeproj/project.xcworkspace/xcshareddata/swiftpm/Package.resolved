@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SF",
+        "repositoryURL": "https://github.com/zmeriksen/SF.git",
+        "state": {
+          "branch": "master",
+          "revision": "5222c36758a87d997fd5d9c504b25fe96b1e9806",
+          "version": null
+        }
+      },
+      {
+        "package": "URLImage",
+        "repositoryURL": "https://github.com/dmytro-anokhin/url-image",
+        "state": {
+          "branch": null,
+          "revision": "c8cbd3c7253fca8619f8fe76b60b4fc22ec69746",
+          "version": "0.6.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		29EEFEDC232324E700E27264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EEFEDB232324E700E27264 /* Assets.xcassets */; };
 		29EEFEDF232324E800E27264 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EEFEDE232324E800E27264 /* Preview Assets.xcassets */; };
 		29EEFEE2232324E800E27264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29EEFEE0232324E800E27264 /* LaunchScreen.storyboard */; };
+		29EEFEEA23232D5700E27264 /* L1MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EEFEE923232D5700E27264 /* L1MusicView.swift */; };
+		29EEFEEC23232D6A00E27264 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EEFEEB23232D6A00E27264 /* Song.swift */; };
+		29EEFEEF23232F2F00E27264 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 29EEFEEE23232F2F00E27264 /* URLImage */; };
+		29EEFEF223232F4000E27264 /* SF in Frameworks */ = {isa = PBXBuildFile; productRef = 29EEFEF123232F4000E27264 /* SF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		29EEFEDE232324E800E27264 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		29EEFEE1232324E800E27264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29EEFEE3232324E800E27264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29EEFEE923232D5700E27264 /* L1MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1MusicView.swift; sourceTree = "<group>"; };
+		29EEFEEB23232D6A00E27264 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29EEFEEF23232F2F00E27264 /* URLImage in Frameworks */,
+				29EEFEF223232F4000E27264 /* SF in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 				29EEFED5232324E600E27264 /* AppDelegate.swift */,
 				29EEFED7232324E600E27264 /* SceneDelegate.swift */,
 				29EEFED9232324E600E27264 /* ContentView.swift */,
+				29EEFEE923232D5700E27264 /* L1MusicView.swift */,
+				29EEFEEB23232D6A00E27264 /* Song.swift */,
 				29EEFEDB232324E700E27264 /* Assets.xcassets */,
 				29EEFEE0232324E800E27264 /* LaunchScreen.storyboard */,
 				29EEFEE3232324E800E27264 /* Info.plist */,
@@ -91,6 +101,10 @@
 			dependencies = (
 			);
 			name = M;
+			packageProductDependencies = (
+				29EEFEEE23232F2F00E27264 /* URLImage */,
+				29EEFEF123232F4000E27264 /* SF */,
+			);
 			productName = M;
 			productReference = 29EEFED2232324E600E27264 /* M.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 29EEFEC9232324E600E27264;
+			packageReferences = (
+				29EEFEED23232F2F00E27264 /* XCRemoteSwiftPackageReference "url-image" */,
+				29EEFEF023232F4000E27264 /* XCRemoteSwiftPackageReference "SF" */,
+			);
 			productRefGroup = 29EEFED3232324E600E27264 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				29EEFED6232324E600E27264 /* AppDelegate.swift in Sources */,
+				29EEFEEA23232D5700E27264 /* L1MusicView.swift in Sources */,
 				29EEFED8232324E600E27264 /* SceneDelegate.swift in Sources */,
 				29EEFEDA232324E600E27264 /* ContentView.swift in Sources */,
+				29EEFEEC23232D6A00E27264 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +362,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29EEFEED23232F2F00E27264 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+		29EEFEF023232F4000E27264 /* XCRemoteSwiftPackageReference "SF" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zmeriksen/SF.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29EEFEEE23232F2F00E27264 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29EEFEED23232F2F00E27264 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		29EEFEF123232F4000E27264 /* SF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29EEFEF023232F4000E27264 /* XCRemoteSwiftPackageReference "SF" */;
+			productName = SF;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29EEFECA232324E600E27264 /* Project object */;
 }

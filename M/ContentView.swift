@@ -7,11 +7,26 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct ContentView: View {
+    @State private var songs: [Song] = []
+    
     var body: some View {
-        Text("Hello World")
+        
+        NavigationView {
+            List(songs, id: \.self) { song in
+                L1MusicView(song: song)
+            }
+            .navigationBarTitle("Songs")
+        }
+        .onAppear {
+            DispatchQueue.main.async {
+                self.songs = MPMediaQuery.songs().items?.compactMap(Song.init) ?? []
+            }
+        }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
